@@ -6,8 +6,8 @@ function calcularSimulacao(emprestimo, numParcelas, jurosEmprestimo, jurosSaldoD
     emprestimo = emprestimo || 0
     numParcelas = numParcelas || 0;
     parcelaFixa = toFixed(parcelaFixa || emprestimo / numParcelas);
-    jurosEmprestimo = jurosEmprestimo === undefined ? 1 : jurosEmprestimo
-    jurosSaldoDevedor = jurosSaldoDevedor === undefined ? 1 : jurosSaldoDevedor;
+    jurosEmprestimo = jurosEmprestimo === undefined ? 0 : jurosEmprestimo
+    jurosSaldoDevedor = jurosSaldoDevedor === undefined ? 0 : jurosSaldoDevedor;
 
     parcelas = parcelas ? parcelas.concat(new Array(numParcelas - parcelas.length).fill(parcelaFixa)) : new Array(numParcelas).fill(parcelaFixa);
 
